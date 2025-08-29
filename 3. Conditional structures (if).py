@@ -22,4 +22,26 @@ else:
     print("Invalid cabin class")
 
 #3)
-femalevalue = int(input("Enter the biological gender and hemoglobin value: "))
+femalevalue = int(input("If you are female, enter the biological gender and hemoglobin value: "))
+if femalevalue < 117:
+    print("Your hemoglobin value is low")
+elif femalevalue > 155:
+    print("Your hemoglobin value is high")
+elif 117 <= femalevalue <= 155:
+    print("Your hemoglobin value is normal")
+
+malevalue = int(input("If you are male, nter the biological gender and hemoglobin value: "))
+if malevalue < 134:
+    print("Your hemoglobin value is low")
+elif malevalue > 167:
+    print("Your hemoglobin value is high")
+elif 134 <= malevalue <= 167:
+    print("Your hemoglobin value is normal")
+
+
+#4)
+year = int(input("Enter a year: "))
+if (year % 4 == 0) and (year % 100 != 0) and (year % 400 == 0):
+    print("The year is a leap year.")
+else:
+    print("The year is not a leap year.")
