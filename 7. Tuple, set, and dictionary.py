@@ -45,7 +45,7 @@ def main():
         choice = input("Your choice: ")
 
         if choice == "1":
-            # Enter new airport
+
             icao = input("Enter ICAO code: ").upper()
             name = input("Enter airport name: ")
             airports[icao] = name
