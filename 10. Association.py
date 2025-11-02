@@ -23,7 +23,7 @@ class Elevator:
             print("Error: Target floor is out of range.")
             return
 
-        print(f"Moving from floor {self.current_floor} to floor {target_floor}...")
+        print(f"Moving from floor {self.current_floor} to floor {target_floor}")
         while self.current_floor < target_floor:
             self.floor_up()
         while self.current_floor > target_floor:
@@ -49,7 +49,7 @@ class Building:
         elevator.go_to_floor(destination_floor)
 
     def fire_alarm(self):
-        print("🚨 Fire alarm activated! Moving all elevators to the bottom floor...\n")
+        print("Fire alarm activated! Moving all elevators to the bottom floor\n")
         for i, elevator in enumerate(self.elevators, start=1):
             print(f"Elevator {i}:")
             elevator.go_to_floor(elevator.bottom_floor)
@@ -78,7 +78,6 @@ class Car:
 
     def accelerate(self, change):
         self.current_speed += change
-        # Keep speed within valid limits
         if self.current_speed > self.maximum_speed:
             self.current_speed = self.maximum_speed
         elif self.current_speed < 0:
@@ -101,7 +100,7 @@ class Race:
             car.drive(1)
 
     def print_status(self):
-        print(f"\n🏁 {self.name} — Race status")
+        print(f"\n {self.name} — Race status")
         print(f"{'Car':<10}{'Max Speed (km/h)':<20}{'Current Speed (km/h)':<22}{'Distance (km)':<15}")
         print("-" * 67)
         for car in self.cars:
@@ -130,7 +129,7 @@ def main():
         race.hour_passes()
         hours_passed += 1
         if hours_passed % 10 == 0:
-            print(f"⏱ Hour {hours_passed}")
+            print(f"Hour {hours_passed}")
             race.print_status()
     print(f"Race finished in {hours_passed} hours!")
     race.print_status()
